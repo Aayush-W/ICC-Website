@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Ministers and Secretaries</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+ 
+  <div class="video-container">
+    <video autoplay muted loop id="bg-video">
+      <source src="https://cdn.pixabay.com/video/2022/09/20/131999-751915336_large.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  
+
+  <!-- Image Section Below the Navbar -->
+  <section class="top-banner">
+    <a href="https://yas.gov.in/" target="_blank">
+      <img src="https://yas.gov.in/sites/all/themes/youthaffair/logo.png" alt="gov">
+    </a>
+    <a href="https://amritmahotsav.nic.in/" target="_blank">
+      <img src="https://yas.gov.in/sites/all/themes/youthaffair/images/akam.jpg" alt="amritmahotsav">
+    </a>
+    <a href="https://g20.org/engagement-groups-2/" target="_blank">
+      <img src="https://yas.gov.in/sites/all/themes/youthaffair/images/g20-logo.png" alt="g20-logo">
+    </a>
+    <a href="https://swachhbharat.mygov.in/" target="_blank">
+      <img src="https://yas.gov.in/sites/all/themes/youthaffair/images/swach-bharat.png" alt="swachh bharat">
+    </a>
+  </section>
+
+  <main class="content-container">
+    <h1>List of Ministers/ Secretaries</h1>
+    <div class="content-grid">
+      <a href="https://yas.gov.in/sites/default/files/List%20of%20Ministers.pdf" target="_blank">
+        <img src="https://yas.gov.in/sites/default/files/List%20of%20Ministers%20of%20youth%20affairs%20and%20sports.png" alt="Ministers List">
+      </a>
+      <a href="https://yas.gov.in/sites/default/files/Secreteries%20ministry%20of%20youth%20and%20sports.pdf" target="_blank">
+        <img src="https://yas.gov.in/sites/default/files/List%20of%20Secretaries%20of%20youth%20affairs%20and%20sports.png" alt="Secretaries List">
+      </a>
+      <a href="https://yas.gov.in/sites/default/files/List%20of%20Minister%20of%20State.pdf" target="_blank">
+        <img src="https://yas.gov.in/sites/default/files/List%20of%20Ministers%20of%20State%20for%20youth%20affairs%20and%20sports.png" alt="Ministers of State">
+      </a>
+      <a href="https://yas.gov.in/sites/default/files/Secreteries%20department%20of%20sports.pdf" target="_blank">
+        <img src="https://yas.gov.in/sites/default/files/List%20of%20Secretaries%20Department%20of%20sports.png" alt="Secretaries of Department">
+      </a>
+      <a href="https://yas.gov.in/sites/default/files/Secreteries%20department%20of%20Youth%20Affairs.pdf" target="_blank">
+        <img src="https://yas.gov.in/sites/default/files/List%20of%20Secretaries%20Department%20of%20youth%20affairs.png" alt="Secretaries of Department of youth affairs">
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><h2>Support Organisations</h2></p>
+    <div class="marquee-container">
+        <marquee id="logo-marquee" behavior="scroll" direction="left" scrollamount="8">
+        <a href="https://www.sportsauthorityofindia.nic.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/sai_trans_logo_new.png" alt="Sports Authority of India">
+        </a>
+        <a href="https://mybharat.gov.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/Yuva_beta.png" alt="My Bharat">
+        </a>
+        <a href="https://www.kheloindia.gov.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/Final%20Logo%20without%20tagline-02.jpg" alt="Khelo India">
+        </a>
+        <a href="https://www.rgniyd.gov.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/partner04.png" alt="RGNIYD">
+        </a>
+        <a href="https://www.nadaindia.org/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/partner05.png" alt="NADA">
+        </a>
+        <a href="https://pib.gov.in/indexd.aspx?reg=3&lang=1" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/styles/200_150/public/pib_gov.png?itok=LM_Xl77s" alt="PIB">
+        </a>
+        <a href="https://gem.gov.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/styles/200_150/public/GeM.png?itok=Be6LeylE" alt="GeM">
+        </a>
+        <a href="https://www.mygov.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/styles/200_150/public/mygov.png?itok=9tAneEW2" alt="MyGov">
+        </a>
+        <a href="https://igod.gov.in/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/styles/200_150/public/imageedit_1_2626406453.jpg?itok=J6t0OjE7" alt="IGOD">
+        </a>
+        <a href="https://pmnrf.gov.in/en/" target="_blank">
+          <img src="https://yas.gov.in/sites/default/files/styles/200_150/public/moca_crasoul5.png?itok=T7YGgUql" alt="PMNRF">
+        </a>
+      </marquee>
+      <script>
+        const marquee = document.getElementById("logo-marquee");
+        
+        // Stop marquee when hovering over the marquee container
+        marquee.addEventListener("mouseover", function () {
+          marquee.stop();
+        });
+      
+        // Restart marquee when the cursor leaves the marquee container
+        marquee.addEventListener("mouseout", function () {
+          marquee.start();
+        });
+      </script>
+    </div>
+    <p>&copy; 2025 Government of India</p>
+  </footer>
+
+  <script src="about us.js"></script>
+</body>
+</html>

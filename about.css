@@ -1,0 +1,150 @@
+/* Reset and Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #f1eeee;
+  }
+  
+ 
+  
+  
+  /* Top Banner Section */
+  .top-banner {
+    text-align: center;
+    margin: 2rem 0;
+    background-color: #f5f8f9;
+    padding: auto;
+    margin: 0 15px;
+    justify-content: flex-end;
+  }
+  
+  .banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    image-rendering: optimizeQuality;
+    margin: 10px;
+    justify-content: stretch;
+  }
+  
+  /* Main Content */
+  .content-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgb(251, 251, 251);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fallback if video doesn't load */
+  }
+  
+  .content-container {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+  }
+  
+  .navbar {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  
+  h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    color: #0a0a0a;
+    margin-bottom: 1rem;
+  }
+  
+  /* Mid Content Grid */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .content-grid a img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .content-grid a img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #004080;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+  }
+  
+  /* Marquee */
+  .marquee-container {
+    overflow: hidden;
+    background-color: white;
+    padding: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .marquee-container a {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .marquee-container img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .marquee-container img:hover {
+    transform: scale(1.1);
+  }
+  
