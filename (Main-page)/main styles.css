@@ -1,0 +1,1825 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+body{
+    max-width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*-----header section------*/
+.top-section{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 18px;
+    justify-content: space-around; 
+    max-height:32vh;
+    max-width:100%;  
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+.box{
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px;
+    max-width: 23vw;
+    flex: 0 0 23vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+    
+    b{
+        color:black;
+    }
+}
+
+.status {
+    display: flex;
+    flex-direction:column;
+    gap: 6px;
+    .test{
+        color:green;
+    }
+    .t20{
+        color:purple
+    }
+    .odi{
+        color:skyblue;
+    }
+}
+
+.status span {
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.bar{
+    padding:0 4px;
+    border:1px solid rgba(255,255,255,0.5);
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.flags {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+}
+
+.flags span {
+    font-size: 14px;
+    font-weight: bold;
+    width: 40px;
+    height:20px;
+}
+
+
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: right;
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #666;
+    width:15vw;
+}
+
+button {
+    margin: 12px 0;
+    padding: 8px;
+    color: #0056b3;
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+
+    span{
+        font-weight: 900;
+        padding-left:10px;
+    }
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+}
+
+/* -----scroll-property---- */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}
+
+.top-section:hover::-webkit-scrollbar-thumb {
+    background: #717171;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+
+/*-----------hero-section--------*/
+.hero-section{
+    background-color: #00175F;
+    height: 120vh;
+    width:100%;
+    position: relative;
+}
+.hero-image{
+    background-image: linear-gradient(to top,rgba(0,0,255,0.6),rgba(0,0,0,0.4)),url('https://images.icc-cricket.com/image/upload/t_ratio16_9-size50/prd/o6otfpue4lmzlvdf5ovm');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:97%;
+    border-radius:20px;
+    margin:0 18px;
+    height:75vh;
+    position:relative; /* earlier was absolute*/
+
+}
+
+
+/*----nav-bar-----*/
+
+.sticky{
+    position:sticky;
+    top:0;
+    z-index: 1000;
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    align-items: center;
+    color:white;
+    text-transform: uppercase;
+    width:100%;
+    padding:10px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #00175F;
+
+    a img{
+        margin-top: 4px;
+        height:40px;
+        width:80px;
+    }
+}
+
+.logo{
+    display:flex;
+    gap:20px;
+    align-items: center;
+    font-size:1.5rem;
+}
+
+.menu-bar ul{
+    display:flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-right:8rem;
+}
+
+.menu-bar ul li{
+    list-style-type: none;
+
+    a{
+        text-decoration: none;
+        color:white;
+        font-size:10px;
+        font-weight: 700;
+    }
+}
+.search{
+    display:flex;
+    padding-left:34vw;
+    gap:20px;
+    font-size:10px;
+    font-weight: 700;
+
+    a{
+        text-decoration: none;
+        color:white;
+    }
+
+    i{
+        font-size: 1.2rem;
+        padding:5px;
+    }
+
+    span{
+        display: inline-block;
+        gap:5px;
+        vertical-align:super;
+
+    }
+}
+
+
+/* -----content---- */
+.content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:20px;
+    margin-top:15vw;
+    justify-content: center;
+    width:40vw;
+    color:white;
+
+    div{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    h2{
+        color:white;
+        font-size:2.5rem;
+        font-weight: 700;
+    }
+}
+
+
+/*------image-section-------*/
+
+.images {
+    display: flex;
+    gap: 20px; 
+    padding-left: 21px;
+    overflow-x: scroll;  /*change from auto*/
+    width: 99vw;
+    scroll-behavior: smooth;
+    position: absolute; /* this is absolute within the hero-section */
+    bottom: 2px;
+    padding-bottom: 20px;
+}
+
+
+.img {
+    position: relative;
+    max-width: 23vw; /* Fixed width for the cards */
+    flex:0 0 23vw;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px #00175F; /* Add shadow for a card effect */
+    background-color: white;
+}
+
+/* Images inside the container */
+.img img {
+    width: 100%;
+    height: 450px;
+    border-radius:20px;
+}
+
+/* Text overlay on the image */
+.para {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+}
+
+/* Styling for the text */
+.para span {
+    font-size: 14px;
+}
+
+.para h2 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+
+
+/*---adv.----*/
+
+.advertisement{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advertisement img{
+    padding:8px 0;
+    margin-top:10px;
+    height: 15vh;
+    width:50vw;
+}
+
+
+/*---video section----*/
+
+.videos{
+    background-color: #00175F;
+    width:100%;
+    margin-top: 15px;
+    padding:20px 20px;
+
+    h2{
+        color:white;
+        font-size: 3rem;
+        font-weight: 700;
+        padding:20px 10px;
+    }
+
+
+    nav{
+        display:flex;
+        gap:17px;
+        justify-content: flex-start;
+        align-items: center;
+        padding:10px;
+        font-size: 10px;
+        font-weight: 700;
+
+        a{
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+        .underline{
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 3px;
+            color:white;
+        }
+
+    }
+
+    .hr{
+        margin:0;
+        margin-left:10px;
+    }
+}
+
+
+
+.videos-part {
+    display: flex;
+    gap: 20px; 
+    padding: 20px 0;
+    padding-right: 20px;
+    overflow-x: auto; 
+    width: 97vw;
+    scroll-behavior: smooth;
+    /* z-index:300; */
+    
+}
+    
+    
+.video {
+    position: relative;
+    width: 27vw; /* Fixed width for the cards */
+    flex:0 0 27vw;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Add shadow for a card effect */
+    background-color: white;
+}
+    
+    /* Images inside the container */
+.video img {
+    width: 100%;
+    height: 500px;
+    border-radius:20px;
+}
+
+
+.video i{
+    position:absolute;
+    top:20px;
+    left:5px;
+    font-size: 3rem;
+    color:white;
+    cursor: pointer;
+
+}
+    
+    /* Text overlay on the image */
+.v-para {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    background: linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+    border-radius: 20px;
+}
+    
+    /* Styling for the text */
+.v-para span {
+    font-size: 14px;
+}
+    
+.v-para h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.container{
+    position:relative;
+    background-color: #00175F;
+   
+}
+
+.margin{
+    width: 100%;
+    cursor: pointer;
+    margin-top:60px;
+}
+
+.button{
+    position:relative;
+    left:50%;
+    width:10vw;
+   justify-self: center;
+   margin-top: -50px;
+   
+   button{
+    font-size: 10px;
+    font-weight: 800;
+    padding:15px 30px;
+   }
+    
+}
+
+
+
+/* -----ranking------*/
+.men{
+    font-size: 38px;
+    font-weight: 700;
+    color:#00175F;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.women{
+    font-size: 38px;
+    font-weight: 700;
+    color:#00175F;
+    text-transform: uppercase;
+    padding:50px 20px 20px 20px;
+}
+
+
+.women-rank{
+    display: flex;
+    justify-content: flex-start;
+    gap:40px;
+    /* padding-left: 20px; */
+    margin: 0 20px;
+}
+
+
+
+
+
+
+.men-rank {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 0 20px;
+    overflow-x: hidden; /* Default to no scrolling */
+}
+
+/* Ensure the table has a fixed width */
+.table {
+    border: 2px solid #DCE0E2;
+    display: flex;
+    flex-direction: column;
+    width: 440px; /* Fixed width */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.t-heading{
+    text-transform: uppercase;
+    text-align: left;
+    padding:0 10px;
+    padding-top: 10px;
+    font-weight: 400;
+}
+
+.t-row{
+    display:flex;
+    /* padding:20px; */
+}
+
+.t-bold{
+    padding:15px 0;
+}
+
+.r{
+    gap: 11px;
+    display: flex;
+    padding-left:8px;
+    align-items: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(126, 155, 179);
+    margin: 10px;
+}
+
+.score{
+    padding-right:8px;
+}
+
+
+.t-flag{
+    flex:1;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+}
+.t-button{
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.green{
+    border:2px solid lightgreen;
+}
+
+.blue{
+    border:2px solid lightskyblue;
+}
+
+.pink{
+    border:2px solid #FA08EA;
+}
+/*---live-section---*/
+.live{
+    h2{
+        font-size: 2rem;
+        font-weight: 700;
+        padding:20px 10px;
+        color:#00175F;
+        text-transform: uppercase;
+    }
+}
+
+.live-content{
+    height:30vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    p{
+        font-size:1.5rem;
+    }
+}
+
+/*---ICC-TV,family-section-----*/
+.icctv,.family{
+    display:flex;
+    background-color: #00175F;
+    /* height:70vh; */
+    padding:30px 0;
+}
+
+
+
+
+.tv-content{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left:20px;
+    padding: 30px;
+
+    img{
+        height:150px;
+    }
+
+    .icc-tv{
+        height: 45px;
+        width: 250px;
+        font-size: 10px;
+        font-weight: 800;
+        color: #00175F;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .para-tv{
+        color:white;
+        font-size: 18px;
+        font-weight: 500;
+        width:fit-content;
+    }
+}
+
+.family {
+    .tv-content{
+        img{
+            height:60px;
+        }
+    }
+}
+
+.image-tv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-tv img{
+    height: 100%;
+    width:55vw;
+    
+}
+
+
+/*----news-----*/
+
+.news{
+    background: linear-gradient(to top, #00175F 50%, transparent 50%);
+    margin-bottom: 40px;
+    position:relative;
+    h1{
+        font-size: 38px;
+        font-weight: 800;
+        color:#00175F;
+        text-transform: uppercase;
+        padding:40px 0 0 20px;
+    }
+}
+
+#ball{
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.cric-news{
+    display: flex;
+    justify-content: space-between;
+}
+
+.album-phots{
+    position:relative;
+    border-radius: 10px;
+    width:fit-content;
+    
+}
+
+.album-content{
+    position:absolute;
+    bottom: 5px;
+    color:white;
+    padding-left: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.9),transparent);
+}
+
+
+.album{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "one one two"
+                         "one one three"
+                         "four five five"
+                         "six five five";
+    gap:20px;
+    padding:20px;
+
+        img{
+            height:300px;
+            border-radius: 10px;
+        }
+}
+
+#large{
+    height: 630px;
+    width:46vw;
+}
+
+.box-1{
+    grid-area:one;
+}
+
+.box-2{
+    grid-area:two;
+}
+
+.box-3{
+    grid-area:three;
+}
+
+.box-4{
+    grid-area:four;
+}
+
+.box-5{
+    grid-area:five;
+}
+
+.box-6{
+    grid-area:six;
+}
+
+.headlines{
+    font-size: 16px;
+    font-weight: 800;
+    width: 25vw;
+    padding-right:60px;
+    color:black;
+}
+
+.popular-news{
+    width: 25vw;
+    hr{
+        width:20vw;
+    }
+
+    .pt{
+        padding-bottom: 20px;
+    }
+}
+
+.pop{
+    color:#00175F;
+}
+.popular-news ol {
+    counter-reset: item; /* Resets the counter ---new thing---- */
+}
+
+.popular-news li {
+    list-style: none; /* Removes the default list style */
+    counter-increment: item; /* Increments the counter */
+    position: relative;
+    padding-left: 25px; 
+    margin-bottom: 20px;
+}
+
+.popular-news li::before {
+    content: counter(item); /* Adds the number before the item */
+    position: absolute;
+    left: 0;
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjust to your needs */
+}
+
+.pt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adjust the gap between span and p */
+}
+
+.headlines {
+    margin: 0; /* Removes default margin */
+    overflow-wrap: break-word; /* Ensures long text breaks to avoid overflow */
+    word-wrap: break-word; /* Older property for better compatibility */
+    white-space: normal; /* Ensures the text wraps within the container */
+    width:20vw;
+}
+
+
+.half{
+    padding-bottom: 40px;
+    hr{
+        width:70%;
+        
+    }
+
+    .button{
+        margin-right: 80px;
+        button{
+            font-size: 10px;
+            font-weight: 800;
+            padding:15px 30px;
+        }
+
+    }
+}
+
+/*----awards-section----*/
+.awards{
+    background-color: black;
+    position: relative;
+    /* height:110vh; */
+    display:flex;
+    flex-direction: column;
+    h1{
+        font-size: 60px;
+        font-weight: 300;
+        color: white;
+        text-align: center;
+        padding:50px;
+        text-transform: uppercase;
+        line-height: 16px;
+    }
+}
+
+.dt{
+    color:#AC9862;
+    font-size: 16px;
+}
+.a-img{
+    position:absolute;
+    /* top:0; */
+    /* height:150vh; */
+    width:100%;
+}
+
+.winners{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:40px;
+
+}
+
+.c {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #AC9862;
+    position: relative;
+    width: 300px; /* Set the desired width for the card */
+    height: 36rem; /* Adjust based on your needs */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ply-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.name{
+    position:absolute;
+    color:white;
+    padding-top: 20px;
+    top:0;
+    h3{
+        font-size: 2rem;
+    }
+    text-align: center;
+    .fi{
+        padding-top: 5px;
+        font-size: 2rem;
+    }
+}
+
+.runs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px;
+    gap:10px;
+}
+
+.run, .mtch {
+    text-align: center;
+}
+
+.run{
+    border-right:1px solid #666;
+}
+
+.run span:first-child, .mtch span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.run span:last-child, .mtch span:last-child {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.aw{
+    background:transparent;
+    padding:0 40px;
+    
+   
+
+    .button{
+        button{
+            background-color: #AC9862;
+            color:black;
+            font-size: 10px;
+            font-weight: 800;
+            padding:15px 30px;
+        }
+    }
+}
+
+
+
+/*----winner-card------*/
+
+.winr-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+    background-color: #000;
+    /* font-family: Arial, sans-serif; */
+}
+
+.winners-card {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Horizontal scroll */
+    padding: 20px;
+    scroll-behavior: smooth;
+    max-width: 90%; /* To control the width of the scrollable area */
+}
+
+.cards {
+    background-color: #d3d8dc; /* Light gray */
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 300px; /* Adjust the width of each card */
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cards h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 10px 0;
+    text-align: left;
+    color: #000;
+}
+
+.cards button {
+    /* background-color: #e4e4e4; */
+    flex:1;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 10px;
+    font-weight: 800;
+
+}
+
+.closed{
+    background-color:#8996A0;
+    color:black;
+}
+
+.result{
+    background-color: #AC9862;
+    color:black;
+    text-align: center;
+    width:100%;
+
+    button{
+        padding:40px 0;
+    }
+}
+/*----footer-section-----*/
+
+.end-page{
+    padding-top:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.values{
+    text-align: center;
+    padding-bottom:10px;
+    padding-top:6px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color:#666;
+}
+
+.footer-hr{
+    border:1px solid rgba(255,255,255,0.7);
+    width:45%;
+}
+
+.p-logos{
+    display:flex;
+    gap:15px;
+
+    img{
+        width:150px;
+        height:50px;
+    }
+}
+
+.p-logos-sm{
+    display:flex;
+    gap:15px;
+    justify-content: center;
+
+    img{
+        width:100px;
+        height:30px;
+    }
+}
+
+.all-supports{
+    display:flex;
+    gap:40px;
+    justify-content: center;
+}
+
+.social-media{
+    display:flex;
+    justify-content: center;
+    font-size:1rem;
+    
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+    padding:20px 0;
+    color:#BEBEBE;
+}
+.social-icons i{
+    border-radius:50%;
+    border:1px solid #BEBEBE;
+    padding:12px;
+}
+
+.terms{
+    display:flex;
+    gap:30px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    padding-bottom:25px;
+}
+.terms a{
+    text-decoration: none;
+    color:#00175F;
+}
+
+
+.copyright{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        height:20px;
+        width: 50px;
+    }
+
+    p{
+        padding-bottom:40px;
+    }
+}
+
+
+
+
+
+
+/*----responsive-------*/
+
+@media screen and (max-width:1274px){
+
+
+    /*navbar wala search*/
+    .search{
+        padding-left: 0;
+    }
+
+
+    /*ICC-Tv*/
+    #virat{
+        width: fit-content;
+    }
+
+
+    /*award-section*/
+
+    .winners-card{
+        gap:20px;
+    }
+
+    /*family-section*/
+    .family{
+        margin-top:30px;
+    }
+}
+
+
+@media screen and (max-width:1250px){
+
+    /*---header-part----*/
+    .top-section{
+        max-height:50vh;
+    }
+
+    /*----nav-bar-----*/
+    .search{
+        padding-left: 0;
+    }
+    
+
+    /*----hero-section-----*/
+    .hero-image{
+        margin-right:2vw;
+    }
+
+
+    /*---ranking-----*/
+    .men-rank {
+        overflow-x: auto; 
+        padding: 0 10px; 
+    }
+
+    .table {
+        width: 440px; 
+    }
+
+
+    /*----icc-tv & family-section------*/
+    .icctv,.family{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tv-content{
+        align-items: center;
+
+        .para-tv{
+            text-align: center;
+        }
+    }
+
+    .tv-content{
+        padding: 22px;
+    }
+    
+
+
+    /*----news-section----*/
+    .news{
+        background:none;
+        & > img{
+            display: none;
+        }
+    }
+
+
+    /*---awards-section------*/
+    .awards{
+        h1{
+            font-size: 26px;
+            text-align: left;
+            line-height: 24px;
+        }
+    }
+    .winr-cards{
+        height:50vh;
+    }
+    .winners-card{
+        gap:20vw;
+    }
+
+    .advertisement{
+        display: none;
+    }
+    
+}
+
+
+
+
+@media (max-width:890px){
+
+
+    /*---hero-section----*/
+    .hero-section{
+        height: 114vh;
+    }
+
+    .content {
+        transform: scale(0.5); /* Scale everything down by 50% */
+        transform-origin: top left; /* Keep scaling consistent from top left */
+        width: 100%;
+        bottom: 200px;
+    }
+
+    .img{
+        max-width: 30vw;
+        flex: 0 0 30vw;
+        bottom:-30px;
+        height: 70%;
+    }
+
+
+    /*nav-bar----*/
+    .menu-bar{
+        width:60vw;
+    }
+
+   
+
+    /*---video-section----*/
+    .videos{
+        h2{
+            font-size: 2rem;
+        }
+
+        nav{
+            font-size: 12px;
+        }
+    }
+
+
+    .cards{
+        min-width:370px;
+        height:244px;
+
+        h2{
+            line-height: 34px;
+        }
+    }
+
+    .videos-part {
+        height: 75%; 
+        width: 100%;  
+        padding-top: 45px;
+    }
+
+    .video {
+        height: 300px; 
+        width: 27vw;   
+    }
+
+    .video img {
+        height: 100%;  
+        width: 100%;   
+    }
+    .v-para span {
+        font-size: 7px; 
+    }
+
+    .v-para h2 {
+        font-size: 9px; 
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .video i{
+        font-size: 1.5rem;
+    }
+
+
+
+
+   /*---news-section-----*/
+    .news {
+        width: 90%;
+        margin: 10px 20px;
+    }
+    
+    .news h1 {
+        font-size: 24px;
+        color: #001F54;
+        font-weight: bold;
+    }
+    
+    /* Cric-news section */
+    .cric-news {
+        display: block;
+        padding: 20px;
+    }
+
+    .album {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .album-phots {
+        display: flex;
+        flex-direction: row; /* Horizontal layout for image and text */
+        width: 100%;
+        gap: 20px; /* Space between image and text */
+        align-items: center; /* Vertically align content */
+    }
+
+    .album-phots img {
+        width: 60%; /* Adjust image width */
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .album-content {
+        position: static; /* Remove absolute positioning */
+        background: none; /* Remove background gradient */
+        color: black; /* Change text color for better contrast */
+        width: 40%; /* Make the text occupy the remaining space */
+        padding: 0; /* Remove extra padding */
+        text-align: left; /* Align text to the left */
+    }
+
+    #large {
+        height: auto;
+        width: 60%; /* Ensure the larger image scales down */
+    }
+
+    .box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+        grid-area: unset;
+    }
+
+    .album-content h2 {
+        font-size: 18px; /* Adjust heading size */
+        margin-bottom: 5px;
+    }
+
+    .album-content span {
+        display: block;
+        font-size: 14px; /* Adjust the time and description font size */
+        margin-bottom: 5px;
+    }
+
+
+    .popular-news{
+        width: fit-content;
+        hr{
+            width: 80vw;
+        }
+    }
+
+    .headlines {
+        font-size: 14px;
+        padding-right: 20px;
+        width:90vw;
+
+    }
+
+    .a-img{
+        width: 76vw;
+        img{
+            width: 76vw;
+        }
+    }
+
+
+    .news{
+
+        .half{
+            background: none;
+            .button button{
+                padding:5px 30px;
+            }
+        }
+    }
+
+
+    /*------awards-section----*/
+    .c {
+        width: 150px; 
+        height: 18rem; /* Scale down height to half */
+    }
+
+    .runs {
+        padding: 5px; 
+    }
+
+    .run, .mtch {
+        gap: 5px; 
+    }
+
+    .run span:first-child, .mtch span:first-child {
+        font-size: 14px; 
+    }
+
+    .run span:last-child, .mtch span:last-child {
+        font-size: 8px; 
+    }
+
+    .run {
+        border-right: none; 
+    }
+
+    .name {
+        padding-top: 0; 
+    }
+
+    .name h3 {
+        font-size: 10px; 
+    }
+
+    .name .fi {
+        padding-top: 2px; 
+        font-size: 1rem; 
+    }
+
+    .aw{
+        .button button{
+            padding:5px 30px;
+        }
+    }
+
+    
+    
+}
+
+
+
+
+@media(max-width:786px){
+
+    /*header-section*/
+    .top-section{
+        .box{
+            max-width: 70vw;
+            flex:0 0 70vw;
+
+            .date p{
+                width: fit-content;
+            }
+        }
+    }
+
+
+    /*---hero-section---*/
+    .hero-image{
+        margin:0 6px;
+    }
+
+    .img{
+        max-width: 50vw;
+        flex: 0 0 50vw;
+        bottom:-30px;
+    }
+
+    .images{
+        padding-left: 5px;
+    }
+
+
+
+    /*---nav-bar----*/
+    .sticky {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .logo {
+        gap: 10px; /* Reduce gap between logo and bars */
+    }
+
+    .menu-bar ul {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px; 
+        margin: 0; 
+        width: 100%; /* Ensure the menu bar takes full width */
+    }
+
+    .search {
+        font-size: 12px; 
+        gap: 15px; 
+    }
+
+    .search {
+        order: 1; 
+        padding-left: 0; 
+        justify-content: flex-start;
+    }
+
+    .del{
+        display:none;
+    }
+
+
+    /*---video-section----*/
+    .videos{
+        h2 {
+            font-size: 15px;
+        }
+    
+
+        nav{
+            font-size: 8px;
+        }
+    }
+
+    
+   /*---news-section---*/
+    .popular-news{
+        width: fit-content;
+        hr{
+            width: 80vw;
+        }
+    }
+
+    .headlines {
+        font-size: 14px;
+        padding-right: 20px;
+        width:90vw;
+
+    }
+    .a-img{
+        width: 70vw;
+        img{
+            width: 60vw;
+        }
+    }
+}
+
+
+
+@media(max-width:630px){
+
+    /*popular-news*/
+    .headlines {
+        font-size: 14px;
+        padding-right: 20px;
+        width:70vw;
+
+    }
+}
+
+
+@media(max-width:450px){
+
+    /*-----top-section-----*/
+    .top-section{
+        .box{
+            max-width: 88vw;
+            flex:0 0 88vw;
+
+            .date p{
+                width: fit-content;
+            }
+        }
+    }
+
+
+    /*--nav-bar---*/
+    .logo a img{
+        width:10vw;
+    }
+
+
+    /*---hero-section----*/
+    .hero-image{
+        margin:0 6px;
+    }
+
+    .img{
+        max-width: 65vw;
+        flex: 0 0 65vw;
+    }
+
+
+
+    /*--video-section---*/
+    .videos{
+        h2{
+            font-size: 1.5rem;
+        }
+
+        nav{
+            font-size: 8px;
+        }
+    }
+
+    .video{
+        h2{
+            font-size: 10px;
+        }
+
+        .v-para{
+            padding:0 5px 3px 3px;
+            border-radius: 10px;
+        }
+    }
+
+    .button button{
+        padding:5px 30px;
+    }
+
+
+    /*-----ranking----*/
+    .rankings{
+        .men,.women{
+            font-size: 26px;
+            padding-bottom: 2px;
+        }
+
+        .men-rank,.women-rank{
+            overflow-x: scroll;
+        }
+    }
+
+    .image-tv{
+        #virat{
+            width:400px;
+        }
+    }
+
+
+    .news{
+
+        .half{
+            background: none;
+            .button button{
+                padding:5px 30px;
+            }
+        }
+    }
+
+
+    .headlines {
+        font-size: 14px;
+        padding-right: 20px;
+        width:60vw;
+
+    }
+
+    .c {
+        width: 150px; 
+        height: 18rem; /* Scale down height to half */
+    }
+
+    .runs {
+        padding: 5px; 
+    }
+
+    .run, .mtch {
+        gap: 5px; 
+    }
+
+    .run span:first-child, .mtch span:first-child {
+        font-size: 14px; 
+    }
+
+    .run span:last-child, .mtch span:last-child {
+        font-size: 8px; 
+    }
+
+    .run {
+        border-right: none; 
+    }
+
+    .name {
+        padding-top: 0; 
+    }
+
+    .name h3 {
+        font-size: 10px; 
+    }
+
+    .name .fi {
+        padding-top: 2px; 
+        font-size: 1rem; 
+    }
+
+    .aw{
+        .button button{
+            padding:5px 30px;
+        }
+    }
+
+    @media (max-width: 450px) {
+
+
+        /*----footer-section----*/
+        .values {
+            font-size: 10px;
+        }
+    
+        .footer-hr {
+            width: 30%;
+        }
+    
+        .p-logos img {
+            width: 100px;
+            height: 30px;
+        }
+    
+        .p-logos-sm img {
+            width: 80px;
+            height: 24px;
+        }
+    
+        .all-supports {
+            gap: 20px;
+        }
+    
+        .social-media {
+            font-size: 0.8rem;
+        }
+    
+        .social-icons i {
+            padding: 8px;
+        }
+    
+        .terms {
+            font-size: 8px;
+            gap: 15px;
+        }
+    
+        .copyright img {
+            width: 40px;
+            height: 16px;
+        }
+    
+        .copyright p {
+            padding-bottom: 20px;
+        }
+    }
+    
+    
+}
