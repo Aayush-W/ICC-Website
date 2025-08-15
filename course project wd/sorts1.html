@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Video Background */
+    #backgroundVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Places video in the background */
+    }
+
+    /* Header with Transparent Background */
+    header {
+      background: rgba(0, 0, 0, 0.5); /* Transparent overlay for text visibility */
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      background-color: rgba(0, 0, 0, 0.5); /* Transparent tab background */
+      padding: 15px 0;
+      position: sticky;
+      top: 80px; /* Below header */
+      z-index: 900;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 15px;
+      color: #bbb;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .tab:hover,
+    .tab.active {
+      color: white;
+      background-color: #ff0000;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 40px 20px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Card Styles */
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      z-index: 1; /* Keeps cards above the video background */
+      position: relative;
+    }
+
+    .card {
+      width: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #202020;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      transform: scale(1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card p {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #ddd;
+      text-align: center;
+      padding: 10px;
+      background-color: #282828;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      background-color: #202020;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <video id="backgroundVideo" autoplay muted loop>
+    <source src="backgroundvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="categories" class="tab-content active">
+    <h2 style="text-align: center; margin-bottom: 20px;">Explore</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="football.png" alt="Football">
+        <p>Football</p>
+      </div>
+      <div class="card">
+        <img src="cricket.jpg" alt="Cricket">
+        <p>Cricket</p>
+      </div>
+      <div class="card">
+        <img src="Blog-Banner-6.jpg" alt="Badminton">
+        <p>Badminton</p>
+      </div>
+      <div class="card">
+        <img src="wrestling.avif" alt="Wrestling">
+        <p>Wrestling</p>
+      </div>
+      <div class="card">
+        <img src="shortput.avif" alt="Shortput">
+        <p>Shortput</p>
+      </div>
+      <div class="card">
+        <img src="sprint.avif" alt="Sprint">
+        <p>Sprint</p>
+      </div>
+      <div class="card">
+        <img src="Shooting.avif" alt="shooting">
+        <p>Shooting</p>
+      </div>
+      <div class="card">
+        <img src="archery.jpg" alt="archery">
+        <p>Archery</p>
+      </div>
+      <div class="card">
+        <img src="javelin.avif" alt="javelin">
+        <p>Javelin</p>
+      </div>
+      <div class="card">
+        <img src="Kho Kho.jpg" alt="Kho Kho">
+        <p>Kho Kho</p>
+      </div>
+      <div class="card">
+        <img src="kabbadi.jpg" alt="kabaddi">
+        <p>kabaddi</p>
+      </div>
+      <div class="card">
+        <img src="Famous-sports-personalities-of-India.jpg" alt="Famous-sports-personalities-of-India">
+        <p>Sports personalities </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
